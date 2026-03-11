@@ -37,4 +37,9 @@ private static HashMap<String, ArrayList<String>> dictionary = new HahMap<>();
             System.out.println("Error reading file.");
         }
     }
+     //clean punctuation
+  public static String cleanWord(String word){
+    word = word.replaceAll("[.,;:-!_],"");
 
+    return word.toLowerCase();
+  }
