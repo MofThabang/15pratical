@@ -57,4 +57,17 @@ private static HashMap<String, ArrayList<String>> dictionary = new HahMap<>();
       dictionary.get(signature).add(word);
     }
   }
+
+  
+  // creation of signature
+  public staic String makeSignature(String word){
+    char[]letters = word.toCharArray();
+    Array.sort(letters);
+    return new String(letters);
+  }
+    
+    
+  
+  }
+
        
