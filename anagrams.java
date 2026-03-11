@@ -77,17 +77,11 @@ private static HashMap<String, ArrayList<String>> dictionary = new HahMap<>();
     }
   }
     
-   
-
-    // --------------------------------------------------
-    // 6. Generate LaTeX output
-    // --------------------------------------------------
-
-    public static void writeLatexFile(String filename) {
-
-        try {
-
-            PrintWriter writer = new PrintWriter(new FileWriter(filename));
+  // generate Latex 
+  public staic void writeLatexFile(String filename){
+    try{
+      PrintWriter writer = new PrintWriter(new FileWriter(filename));
+    
 
             writer.println("\\documentclass{article}");
             writer.println("\\begin{document}");
