@@ -43,3 +43,18 @@ private static HashMap<String, ArrayList<String>> dictionary = new HahMap<>();
 
     return word.toLowerCase();
   }
+ //process and store word 
+  public static void processWord(String word) {
+    String signature = makingSignature(word);
+
+    if (!dictionary.containsKey(signature)){
+      ArrayList<String> List = new ArrayList<>():
+        list.add(word);
+
+      dictionary.put(signature,list);
+
+    }else {
+      dictionary.get(signature).add(word);
+    }
+  }
+       
