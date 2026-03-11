@@ -65,9 +65,69 @@ private static HashMap<String, ArrayList<String>> dictionary = new HahMap<>();
     Array.sort(letters);
     return new String(letters);
   }
+
+// print dictionary
+  public static void printDictionary(){
+    for(String key :dictionary.keySet()){
+      ArrayList<String> words =dictionary.get(key);
+      if (wrd.size() >=2){
+
+        System.out.printIn(key +": " + words);
+      }
+    }
+  }
+    
+   
+
+    // --------------------------------------------------
+    // 6. Generate LaTeX output
+    // --------------------------------------------------
+
+    public static void writeLatexFile(String filename) {
+
+        try {
+
+            PrintWriter writer = new PrintWriter(new FileWriter(filename));
+
+            writer.println("\\documentclass{article}");
+            writer.println("\\begin{document}");
+            writer.println("\\section*{Dictionary of Anagrams}");
+            writer.println("\\begin{itemize}");
+
+            for (String key : dictionary.keySet()) {
+
+                ArrayList<String> words = dictionary.get(key);
+
+                if (words.size() >= 2) {
+
+                    Collections.sort(words);
+
+                    writer.print("\\item ");
+
+                    for (String w : words) {
+                        writer.print(w + " ");
+                    }
+
+                    writer.println();
+                }
+            }
+
+            writer.println("\\end{itemize}");
+            writer.println("\\end{document}");
+
+            writer.close();
+
+        } catch (IOException e) {
+
+            System.out.println("Error writing LaTeX file.");
+
+        }
+    }
+
+  
     
     
   
-  }
+  
 
        
